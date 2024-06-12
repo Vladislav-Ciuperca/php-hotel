@@ -11,7 +11,7 @@
         ],
         [
             'name' => 'Hotel Futuro',
-            'description' => 'Hotel Futuro Descrizione',
+            'description' => 'Hotel Futuri Descrizione',
             'parking' => true,
             'vote' => 2,
             'distance_to_center' => 2
