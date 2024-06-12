@@ -69,41 +69,32 @@ $hotels = [
     </ul>
 
     <table class="w3-table w3-striped">
-
-        <tr>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrizione</th>
+                <th>Voto</th>
+                <th>Distanza dal centro</th>
+                <th>Parcheggio</th>
+            </tr>
+        </thead>
+        <tbody>
             <?php
             foreach ($hotels as $hotel) {
-                echo "<th>" . $hotel["name"] . "</th>";
-            }
-            ?>
-        </tr>
-        <tr>
-            <?php
-            foreach ($hotels as $hotel) {
+                echo "<tr>";
+                echo "<td>" . $hotel["name"] . "</td>";
                 echo "<td>" . $hotel["description"] . "</td>";
-            }
-            ?>
-        </tr>
-        <tr>
-            <?php
-            foreach ($hotels as $hotel) {
                 echo "<td>" . $hotel["vote"] . "</td>";
+                echo "<td>" . $hotel["distance_to_center"] . " km</td>";
+                echo "<td>" . ($hotel["parking"] ? 'si' : 'no') . "</td>";
+                echo "</tr>";
             }
             ?>
-        </tr>
-        <tr>
-            <?php
-            foreach ($hotels as $hotel) {
-                echo "<td>" . $hotel["distance_to_center"] . "</td>";
-            }
-            ?>
-        </tr>
-
+        </tbody>
     </table>
 
+</body>
 
-
-    <h2></h2>
 
 </body>
 
