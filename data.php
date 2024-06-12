@@ -49,6 +49,7 @@ $hotels = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 
@@ -56,9 +57,51 @@ $hotels = [
 
     <h1>contenuto array</h1>
 
-    <pre>
-        <?= var_dump($hotels)  ?>
-    </pre>
+    <ul>
+
+        <?php
+        foreach ($hotels as $hotel) {
+            echo "<li>" . $hotel["name"] . " " . $hotel["vote"] . "</li>";
+        }
+
+        ?>
+
+    </ul>
+
+    <table class="w3-table w3-striped">
+
+        <tr>
+            <?php
+            foreach ($hotels as $hotel) {
+                echo "<th>" . $hotel["name"] . "</th>";
+            }
+            ?>
+        </tr>
+        <tr>
+            <?php
+            foreach ($hotels as $hotel) {
+                echo "<td>" . $hotel["description"] . "</td>";
+            }
+            ?>
+        </tr>
+        <tr>
+            <?php
+            foreach ($hotels as $hotel) {
+                echo "<td>" . $hotel["vote"] . "</td>";
+            }
+            ?>
+        </tr>
+        <tr>
+            <?php
+            foreach ($hotels as $hotel) {
+                echo "<td>" . $hotel["distance_to_center"] . "</td>";
+            }
+            ?>
+        </tr>
+
+    </table>
+
+
 
     <h2></h2>
 
